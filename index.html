@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Essence</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ </head>
+ <body>
+    
+ <header class="header">
+    <div class="logo">
+        <img src="img/logo (2).webp" width="800" height="881" loading="lazy" alt="logo de imagen rosa">
+        <h1>Velvet <span>Essence</span></h1>
+    </div>
+
+    <nav>
+        <ul class="nav">
+            <li><a href="#Inicio">Inicio</a></li>
+            <li><a href="#Historia">Historia</a></li>
+            <li><a href="#Destacadas">Destacadas</a></li>
+            <li><a href="#Comentarios">Comentarios</a></li>
+            <li><a href="#Contactos">Contactos</a></li>
+        </ul>
+    </nav>
+
+    <div class="hamburguesa" id="btn-menu">
+        <i class="bi bi-list"></i>
+    </div>
+
+    <div class="carrito" id="carrito">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span id="cons" class="contador">0</span>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+<div class="carrito-sidebar" id="carritoSidebar">
+
+    <div class="carrito-header">
+        <h2>Tu carrito</h2>
+        <button onclick="cerrarCarrito()">✖</button>
+    </div>
+
+    <div id="listaCarrito" class="carrito-lista"></div>
+
+    <div class="carrito-footer">
+        <p>Total: $<span id="total">0.00</span></p>
+       <a href="#" class="btn-comprar-final" id="btnWhatsapp" >
+    Comprar por WhatsApp
+</a>
+    </div>
+
+</div>
+
+   
+ </header>
+
+ <main>
+    <section class="hero">
+        <div class="container">
+            <div class="text">
+                <h2>Fragancias que despiertan tu esencia</h2>
+                <p>Descubre perfumes unicos diseñados para <br> Destacar tu elegancia natural.</p>
+            </div>
+
+            <div class="btn">
+                <button class="btn-primary">Comprar ahora</button>
+                   <button class="btn-segundary">Ver catalogo</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="nosotros" id="Historia">
+    <div class="container-mp3">
+        <div class="text-mp3">
+           <h2>¿Quiénes somos?</h2>
+        </div>
+
+        <div class="grid-mp3">
+            <div class="imagen">
+                <img src="img/historia.webp" width="800" height="600" loading="lazy" alt="Frasco de perfume antiguo">
+            </div>
+
+            <div class="parrafo">
+                <p>Todo comenzó en un pequeño taller artesanal, donde la obsesión por capturar lo intangible dio vida a nuestra primera creación. Velvet Essence no nació como una marca comercial, sino como un desafío personal: transformar la suavidad táctil del terciopelo en una experiencia olfativa.
+                Cada una de nuestras creaciones es el resultado de un desafío personal: transformar la suavidad táctil del terciopelo en una experiencia olfativa inolvidable. Seleccionamos meticulosamente esencias globales para asegurar que cada gota cuente una historia de lujo, confianza y distinción. No solo creamos aromas, diseñamos el rastro de tus mejores momentos.
+                </p>
+            </div>
+        </div> 
+        
+        <div class="info-mp3">
+            <div class="card">
+                <i class="fas fa-gem"></i>
+                <h3>Calidad Premium</h3>
+                <p>Esencias importadas de la más alta pureza.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-history"></i>
+                <h3>Legado</h3>
+                <p>Más de 10 años creando aromas inolvidables.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-leaf"></i>
+                <h3>Natural</h3>
+                <p>Componentes orgánicos y libres de crueldad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="destacadas" id="Destacadas">
+        <div class="contaner-mp4">
+            <div class="text-mp3">
+               <h2>Nuestras Fragancias Exclusivas</h2>
+            </div>
+
+            <div class="grid-mp4">
+                
+                <article class="producto-card">
+                    <div class="badge">Nuevo</div>
+                    <img src="img/perfume1.webp" loading="lazy" width="800" height="600" alt="Essence d'Or me encanta su aroma es hermoso">
+                    <div class="info">
+                        <h3>Essence d'Or</h3>
+                        <p class="Category">Toque Dorado</p>
+                         <p class="precy">$<span>95.00</span></p>
+                        <button class="btn-comprar" onclick="agregarAlCarrito('Essence d Or', 95, 'perfume1.webp')">
+                            <i class="fa-solid fa-cart-plus"></i>
+                           Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="badge">Nuevo</div>
+                    <img src="img/perfume2.webp" loading="lazy" width="800" height="600" alt="Royal Oud el mejor producto que tenemos obra de arte total">
+                    <div class="info">
+                        <h3>Royal Oud</h3>
+                        <p class="Category">Madera Noble</p>
+                        <p class="precy">$<span>120.00</span></p>
+                        <button class="btn-comprar" onclick="agregarAlCarrito('Royal Oud', 120, 'perfume2.webp')">
+                           <i class="fa-solid fa-cart-plus"></i>
+                           Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="badge">Nuevo</div>
+                    <img src="img/perfume3.webp" loading="lazy" width="800" height="600" alt="Mystic Rose adictivo muy bueno dura las 24 horas">
+                    <div class="info">
+                        <h3>Mystic Rose</h3>
+                        <p class="Category">Floral Intenso</p>
+                       <p class="precy">$<span>75.00</span></p>
+                        <button class="btn-comprar" onclick="agregarAlCarrito('Mystic Rose', 75, 'perfume3.webp')">
+                            <i class="fa-solid fa-cart-plus"></i>
+                           Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                   <div class="badge">Nuevo</div>
+                    <img src="img/perfume4.webp" loading="lazy" width="800" height="600" alt="Silver Ocean uno de los mejores que tenemos transmite un olor hermoso">
+
+                    <div class="info">
+                        <h3>Silver Ocean</h3>
+                         <p class="Category">Fresco Citrico</p>
+                           <p class="precy">$<span>80.00</span></p>
+                        <button class="btn-comprar" onclick="agregarAlCarrito('Silver Ocean', 80, 'perfume4.webp')">
+                            <i class="fa-solid fa-cart-plus"></i>
+                           Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="badge">Nuevo</div>
+                    <img src="img/perfume5.webp" loading="lazy" width="800" height="600" alt="Amber Luxury freco y durareso muy buen producto">
+                    <div class="info">
+                        <h3>Luxury</h3>
+                         <p class="Category">Ammbar Gris</p>
+                          <p class="precy">$<span>110.00</span></p>
+                        <button class="btn-comprar" onclick="agregarAlCarrito('Luxury', 110, 'perfume5.webp')">
+                            <i class="fa-solid fa-cart-plus"></i>
+                           Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="badge">Nuevo</div>
+                    <img src="img/perfume6.webp" loading="lazy" width="800" height="600" alt="Pure Silk obra maestra su olor es muy bueno">
+
+                    <div class="info">
+                        <h3>Pure Silk</h3>
+                         <p class="Category">Suavidad Atalcada</p>
+                         <p class="precy">$<span>90.00</span></p>
+                        <button class="btn-comprar" onclick="agregarAlCarrito('Pure Silk', 90, 'perfume6.webp')">
+                            <i class="fa-solid fa-cart-plus"></i>
+                           Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="badge">Edicion Limitada</div>
+                    <img src="img/perfume7.webp" loading="lazy" width="800" height="600" alt="Dark Vanilla lo m ejor del mercado muy recomendado">
+                    <div class="info">
+                        <h3>Dark Vanilla</h3>
+                        <p class="Category">Dulce Espaciado</p>
+                           <p class="precy">$<span>88.00</span></p>
+                        <button class="btn-comprar" onclick="agregarAlCarrito('Dark Vanilla', 88, 'perfume7.webp')">
+                            <i class="fa-solid fa-cart-plus"></i>
+                           Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="badge">Nuevo</div>
+                    <img src="img/perfume8.webp" loading="lazy" width="800" height="600" alt="Fragancia Velvet Gold con notas de sandalo">
+                    <div class="info">
+                        <h3>Valvet Gold</h3>
+                        <p class="Category">Esencia Nocturna</p>
+                         <p class="precy">$ <span>85.00</span></p>
+                        <button class="btn-comprar" onclick="agregarAlCarrito('Valvet Gold', 85, 'perfume8.webp')">
+                            <i class="fa-solid fa-cart-plus"></i>
+                           Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="comentarios" id="Comentarios">
+        <div class="container-mp3">
+            <div class="text-mp3">
+                <h2>Lo que dicen nuestros clientes</h2>
+            </div>
+
+            <div class="grid-mp5">
+               <div class="card-comentarios">
+                 <img src="img/comentario 1 (1).webp" loading="lazy" width="70" height="70" alt="Cliente de Velvet Essence resaltando la calidad de nuestros perfumes de lujo">
+                 <h3>Hector A. Segura</h3>
+                 <p>La mejor tienda de perfumes Velvet Essence.</p>
+                 <span>⭐ ⭐ ⭐ ⭐ ⭐ </span>
+                 </div>
+
+                 <div class="card-comentarios">
+                    <img src="img/comentario2 (1).webp" loading="lazy"  width="70" height="70" alt="Comentario de usuario satisfecho con rapidez de entrega de la tienda Velvet Essence">
+                    <h3>Marta Paulino</h3>
+                    <p>Me encantan sus aromas que tienen son profesionales.</p>
+                    <span>⭐ ⭐ ⭐ ⭐ ⭐ </span>
+                 </div>
+
+                  <div class="card-comentarios">
+                    <img src="img/comentario 3 (1).webp" loading="lazy"  width="70" height="70" alt="Testimonio de cliente sobre la fijacion y aroma de las fragancias Exclusivas Velvet Essence">
+                    <h3>Jetter A. Capellan</h3>
+                    <p>Me encantan sus servicios muy atentos y responsables.</p>
+                    <span>⭐ ⭐ ⭐ ⭐ ⭐ </span>
+                 </div>
+
+                  <div class="card-comentarios">
+                    <img src="img/comentario 4 (1).webp" loading="lazy"  width="70" height="70" alt="Opinion de cliente recomendado Velvet Essence como la mejor opcion de perfumeria online">
+                    <h3>Saymon Matias</h3>
+                    <p>Tienen una coleccion de perfumes unicas son los mejores Velvet Essence</p>
+                    <span>⭐ ⭐ ⭐ ⭐ ⭐ </span>
+                 </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contactos-section" id="Contactos">
+        <div class="container-mp3">
+            <div class="text-mp3">
+                <h2>Hablemos de tu <span class="dorado">Fragancia</span></h2>
+               <p>Tienes dudas o buscas un aroma especifico? Escribenos</p>
+                <div class="detalles">
+                    <p><i class="fab fa-whatsapp"></i>+1 (809) 674-8126</p>
+                    <p><i class="fas fa-envelope"></i>ruthdaniela21@gmail.com</p>
+                </div>
+            </div>
+
+            <form action="https://formspree.io/f/xvzvnpwo" method="post" id="formulario-velvet" class="form-premium">
+                <div class="input-groud">
+                    <label for="nombre">
+                        Ingrese su nombre
+                    </label>
+
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+                </div>
+
+                <div class="input-groud">
+                    <label for="whatsapp">
+                        Correo Electronico
+                    </label>
+                    <input type="email" name="email" id="email" placeholder="Introdusca su Correo" required>
+                </div>
+
+                <div class="input-groud">
+                    <label for="mensaje">
+                        Que perfume te interesa
+                    </label>
+
+                    <textarea rows="4" id="mensaje" placeholder="Cuentanos que buscas..." required> 
+                    </textarea>
+
+                </div>
+
+                <button type="submit" class="btn-comprar">ENVIAR PEDIDO</button>
+            </form>
+        </div>
+    </section>
+ </main>
+
+ <footer class="footer">
+    <div class="container-footer">
+      <div class="columna-footer">
+        <h2 class="logo-footer">Velvet <span class="dorado">Essence</span></h2>
+        <P>Elevando tu presencia con fragancias exclusivas y elegancia atemporal.
+            Calidad garantizada en cada gota.
+        </P>
+      </div>
+
+      <div class="columna-footer">
+        <h3>Explorar</h3>
+        <ul>
+            <li><a href="#Inicio">Inicio</a></li>
+            <li><a href="#Historia">Historia</a></li>
+            <li><a href="#Destacadas">Destacadas</a></li>
+            <li><a href="#Comentarios">Comentarios</a></li>
+            <li><a href="#Contactos">Contactos</a></li>
+        </ul>
+      </div>
+
+      <div class="columna-footer">
+        <h3>SIguenos</h3>
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/ ruthh__21/" target="_blank">
+               <i class="fab fa-instagram">
+                   
+               </i> instagram
+            </a>
+
+             <a href="https://www.facebook.com/?" target="_blank">
+               <i class="fab fa-facebook">
+                  
+               </i> facebook
+            </a>
+
+             <a href="https://wa.me/809674-8126" target="_blank">
+               <i class="fab fa-whatsapp">
+                  
+               </i> whatsapp
+            </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2026 Velvet Essence Diseñado
+            por <span class="dorado">Ruth Daniela</span>
+        </p>
+    </div>
+ </foooter>
+
+<script src="scrip.js"></script>
+
+ <a href="https://wa.me/18096748126?text=Hola%20Héctor,%20vi%20tu%20web%20Dark-Premium" class="btn-wsp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
