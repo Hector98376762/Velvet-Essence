@@ -7,9 +7,16 @@ btnMenu.addEventListener('click' , () => {
     navMenu.classList.toggle('active');
 });
 
-document.querySelectorAll('.nav')
 
 
+const navLinks = document.querySelectorAll(".nav a");
+
+// 3. NUEVO: Le decimos a cada enlace que, al ser tocado, quite la clase 'active'
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
 
 
 let carrito = [];

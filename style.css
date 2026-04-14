@@ -815,7 +815,7 @@ p,a {
 
     .hamburguesa{
         display: block;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         cursor: pointer;
         color: var(--color-texto);
         
@@ -864,7 +864,7 @@ p,a {
     }
 
     .text h2 {
-        font-size: var(--texto-normal);
+        font-size: 2rem;
     }
 
     .contactos-section {
