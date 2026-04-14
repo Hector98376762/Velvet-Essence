@@ -77,7 +77,7 @@ function actualizarCarrito() {
     if (btnWhatsapp) {
         if (carrito.length > 0) {
             textoPedido += `\n*Total a pagar: $${totalFinal.toFixed(2)}*`;
-            const numero = "521234567890"; // <-- PON TU NÚMERO AQUÍ
+            const numero = "8096748126"; // <-- PON TU NÚMERO AQUÍ
             btnWhatsapp.href = `https://wa.me/${numero}?text=${encodeURIComponent(textoPedido)}`;
             btnWhatsapp.target = "_blank";
         } else {
