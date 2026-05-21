@@ -240,15 +240,17 @@ p,a {
 
 .hero {
     background: linear-gradient(
-        rgba(0,0,0,0.3),
-        rgba(0,0,0,0.3)
-    ),url(img/hero\ \(1\).webp);
+        rgba(0,0,0,0.33),
+        rgba(0,0,0,0.33)
+    ),url(img/hero\ \(2\).webp);
 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 70vh;
+    min-height: 85vh;
+    display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .container {
@@ -256,8 +258,10 @@ p,a {
 }
 
 .text {
-    text-align: center;
-    padding-top: 40px;
+    text-align: left;
+    max-width: 550px;
+    padding: 20px 0;
+    margin-left: 8%;
     animation: fadeUp 1s ease;
 }
 
@@ -273,45 +277,46 @@ p,a {
     }
 }
 
+
 .text h2 {
-    font-size: var(--texto-subtitulo);
+    font-size: 3rem;
     color: var(--color-texto);
-    padding-bottom: 10px;
+    padding-bottom: 13px;
+    text-transform: uppercase;
 }
 
 
 .text p {
-    font-size: var(--texto-normal);
+    font-size: 1.2rem;
     color: var(--color-texto);
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .btn {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 15px;
-    padding-top: 10px;
-    
+    margin-top: 25px; 
+    margin-left: 8%;
 }
 
 .btn-primary {
-    padding: 5px;
-    width: 100px;
+    padding: 12px 24px;
     border-radius: var(--radio-boton);
-    border: 2px solid var(--color-primario);
-    background-color: transparent;
-    color: var(--color-texto);
+    border: 2px solid var(--color-fondo-secundario);
+    background-color: var(--color-texto);
+    color: var(--color-fondo-secundario);
     font-weight: bold;
     cursor: pointer;
     transition: var(--transicion);
+   
 }
 
 .btn-segundary {
-     padding: 5px;
-    width: 100px;
+    padding: 12px 24px;
     border-radius: var(--radio-boton);
     border: 2px solid var(--color-primario);
-    background-color: var(--color-primario);
+    background-color: var(--color-fondo);
     color: var(--color-texto);
     font-weight: bold;
     cursor: pointer;
@@ -321,13 +326,13 @@ p,a {
 .btn-primary.btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: var(--sombra-hover);
-    background-color: var(--color-primario);
+    background-color: var();
 }
 
 .btn-segundary:hover{
     transform: translateY(-3px);
     box-shadow: var(--sombra-hover);
-     background-color: transparent;
+    background-color: transparent;
 }
 
 .nosotros {
@@ -815,9 +820,10 @@ p,a {
 
     .hamburguesa{
         display: block;
-        font-size: 1.7rem;
+        font-size: 1.9rem;
         cursor: pointer;
         color: var(--color-texto);
+        margin-left: 10px;
         
     }
 
